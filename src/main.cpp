@@ -162,7 +162,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println(length);
 
   // whatever you send us... we do the things we can do.
-  increaseVolume();
-  increaseVolume();
+
+  int neighborhoodEntertainmentLevel = 10;
+  for(int i = 0; i < neighborhoodEntertainmentLevel; i++) {
+    increaseVolume();
+  }
+  
   pushPower();
 }
